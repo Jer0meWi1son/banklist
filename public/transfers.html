@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='/scripts/css/main.css'>
+    <title>Mazeb</title>
+</head>
+
+<body style="background-image: url('/scripts/img/pic.png'); 
+background-repeat: no-repeat;
+background-size: 100vw 100vh;
+z-index: -1;">
+    <header>
+        <nav>
+            <div id="brand">
+                <div id="logo"></div>
+                <div id="word-mark">TSF Bank</div>
+            </div>
+            <ul id="menu-content">
+                <li><a href="/index.html" class="center" style="margin-top: 12px; text-decoration: none;">Home</a></li>
+                <li><a href="/customers.html" class="center"
+                        style="margin-top: 12px; text-decoration: none;">Clients</a></li>
+                <li><a href="/transactions.html" class="center"
+                        style="margin-top: 12px; text-decoration: none;">Transactions</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div style="height: 430px;">
+    <div class="card text-white bg-primary" style="max-width: 50%; margin-left: 335px; margin-top: 110px; border-radius: 15px;">
+        <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-exchange-alt" style="color: white; font-size: 25px;"></i>  Transfer</h3>
+            <form autocomplete="off">
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group" id="option">
+                            <label for="exampleFormControlSelect1">Sender</label>
+                            <select class="form-control" name="Sender" id="sender">
+                                <option>Select</option>
+                                <!-- <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option> -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group" id="option1">
+                            <label for="exampleFormControlSelect1">Reciever</label>
+                            <select class="form-control" name="Receiver" id="receiver">
+                                <option>Select</option>
+                                <!-- <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option> -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Amount</label>
+                            <input type="number" name="Amount" class="form-control" id="amt"
+                                placeholder="Enter Amount">
+                        </div>
+                    </div>
+                </div>
+                <button  class="btn btn-primary" id="my-form" style="margin-left: 265px;">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="row" style="background: linear-gradient(170deg, #5bc6ff, #6d36ec);">
+          <div class="col s10 offset-s1" style="color: white;">
+            <div class="col s12" style="text-align: center; padding: 10px;">
+              &copy; Copyrights 2020.
+              <hr color="white" size="1">
+            </div>
+          </div>
+        </div>
+      </footer>
+  <script src="https://kit.fontawesome.com/19c5e58b3f.js" crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyA8s7rM7gYU2tRFS-HkVtRH9n18Pf1DsvU",
+            authDomain: "maze-53547.firebaseapp.com",
+            databaseURL: "https://maze-53547-default-rtdb.firebaseio.com",
+            projectId: "maze-53547",
+            storageBucket: "maze-53547.appspot.com",
+            messagingSenderId: "289830161736",
+            appId: "1:289830161736:web:250aa80c524abaedf8777d",
+            measurementId: "G-GQX1KNSF44"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+
+        const fire = firebase.firestore();
+        fire.settings({
+            timestampsInSnapshots: true
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script>
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     var elems = document.querySelectorAll("select");
+        //     var instances = M.FormSelect.init(elems, {});
+        // });
+    </script>
+    <script src="/scripts/js/transfers.js"></script>
+
+
+</body>
+
+</html>

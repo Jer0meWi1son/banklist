@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel='stylesheet' type='text/css' media='screen' href='/scripts/css/main.css'>
+  <title>Mazeb</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div id="brand">
+        <div id="logo"></div>
+        <div id="word-mark">TSF Bank</div>
+      </div>
+      <ul id="menu-content">
+        <li><a href="/index.html" class="center">Home</a></li>
+        <li><a href="/transfers.html" class="center">Transfers</a></li>
+        <li><a href="/transactions.html" class="center">Transactions</a></li>
+      </ul>
+      </div>
+    </nav>
+  </header>
+  <div style="margin: 15px;">
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 30px;font-weight: 500; margin-left: 10px;"><i class="fas fa-user-friends" style="color: #6d36ec;"></i>  Clients</p>
+  </div>
+  <div style="height: 490px; margin-top: -20px;">
+    <div style="margin: 25px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+
+        <tbody id="table1">
+          <!-- <tr>
+            <td>1000</td>
+            <td>Alvin</td>
+            <td>alvi@gmail.com</td>
+            <td>$0.87</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer >
+    <div class="row" style="background: linear-gradient(170deg, #5bc6ff, #6d36ec);">
+      <div class="col s10 offset-s1" style="color: white;">
+        <div class="col s12" style="text-align: center; padding: 10px;">
+          &copy; Copyrights 2020.
+          <hr color="white" size="1">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/19c5e58b3f.js" crossorigin="anonymous"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyA8s7rM7gYU2tRFS-HkVtRH9n18Pf1DsvU",
+      authDomain: "maze-53547.firebaseapp.com",
+      databaseURL: "https://maze-53547-default-rtdb.firebaseio.com",
+      projectId: "maze-53547",
+      storageBucket: "maze-53547.appspot.com",
+      messagingSenderId: "289830161736",
+      appId: "1:289830161736:web:250aa80c524abaedf8777d",
+      measurementId: "G-GQX1KNSF44"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+
+    const fire = firebase.firestore();
+    fire.settings({
+      timestampsInSnapshots: true
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="/scripts/js/main.js"></script>
+</body>
+
+</html>
